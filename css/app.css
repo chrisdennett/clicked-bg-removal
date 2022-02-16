@@ -23,29 +23,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
-  
   color: white;
   overflow: hidden;
-  /* background-image: url("/img/noisy.png"); */
-  /* background-image: url("/img/groovepaper.png"); */
-  background-image: url("/img/rough-diagonal.png");
 }
-
-
 
 #app {
-  border: inset 2px hsl(0deg, 0%, 80%);
   position: relative;
+  /* border: inset 2px hsl(0deg, 0%, 80%);
+  position: relative; */
   /* border: 1px solid red; */
   line-height: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
-.overlay {
+img {
   position: absolute;
-  min-width: 100%;
-  min-height: 100%;
-  line-height: 0;
+  top: 0;
+  left: 0;
 }
 
 #shadowOverlay {
@@ -62,12 +57,20 @@ body {
 canvas {
   display: inline-block;
   line-height: 0;
-  background-color: black;
+  min-height: 100vh;
+  z-index: 1;
+  position: absolute;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 
 #controls {
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   top: 0;
   left: 0;
   display: flex;
